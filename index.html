@@ -81,9 +81,12 @@
 <script>
   $("#close").click(function(){
     $('.center-div').toggleClass('slide-right');
-    Q(function(){
-			B.runCallApp('closeHtml', [this]);
-		});
+    setTimeout(function () {
+      $('.center-div').hide();
+      Q(function(){
+  			B.runCallApp('closeHtml', [this]);
+  		});
+    }, 500)
 	});
 </script>
 </body>
